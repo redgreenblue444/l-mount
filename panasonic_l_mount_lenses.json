@@ -1,0 +1,135 @@
+{
+  "manufacturer": "Panasonic",
+  "mount": "L-mount",
+  "lens_type": "autofocus",
+  "lenses": [
+    {
+      "name": "Lumix S 24-105mm f/4 Macro O.I.S.",
+      "focal_length": "24-105mm",
+      "aperture": "f/4",
+      "type": "zoom",
+      "image_stabilization": true,
+      "special_features": ["Macro capability", "O.I.S."],
+      "release_year": 2019
+    },
+    {
+      "name": "Lumix S 70-200mm f/4 O.I.S.",
+      "focal_length": "70-200mm",
+      "aperture": "f/4",
+      "type": "zoom",
+      "image_stabilization": true,
+      "special_features": ["O.I.S."],
+      "release_year": 2019
+    },
+    {
+      "name": "Lumix S 50mm f/1.4",
+      "focal_length": "50mm",
+      "aperture": "f/1.4",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Large aperture"],
+      "release_year": 2019
+    },
+    {
+      "name": "Lumix S 85mm f/1.8",
+      "focal_length": "85mm",
+      "aperture": "f/1.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": [],
+      "release_year": 2020
+    },
+    {
+      "name": "Lumix S 20-60mm f/3.5-5.6",
+      "focal_length": "20-60mm",
+      "aperture": "f/3.5-5.6",
+      "type": "zoom",
+      "image_stabilization": false,
+      "special_features": ["Wide-angle zoom"],
+      "release_year": 2020
+    },
+    {
+      "name": "Lumix S 24-70mm f/2.8",
+      "focal_length": "24-70mm",
+      "aperture": "f/2.8",
+      "type": "zoom",
+      "image_stabilization": false,
+      "special_features": ["Constant f/2.8 aperture"],
+      "release_year": 2020
+    },
+    {
+      "name": "Lumix S 70-200mm f/2.8 O.I.S.",
+      "focal_length": "70-200mm",
+      "aperture": "f/2.8",
+      "type": "zoom",
+      "image_stabilization": true,
+      "special_features": ["O.I.S.", "Constant f/2.8 aperture"],
+      "release_year": 2020
+    },
+    {
+      "name": "Lumix S 16-35mm f/4",
+      "focal_length": "16-35mm",
+      "aperture": "f/4",
+      "type": "zoom",
+      "image_stabilization": false,
+      "special_features": ["Ultra-wide zoom"],
+      "release_year": 2021
+    },
+    {
+      "name": "Lumix S 50mm f/1.8",
+      "focal_length": "50mm",
+      "aperture": "f/1.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Compact design"],
+      "release_year": 2021
+    },
+    {
+      "name": "Lumix S 24mm f/1.8",
+      "focal_length": "24mm",
+      "aperture": "f/1.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Wide-angle prime"],
+      "release_year": 2021
+    },
+    {
+      "name": "Lumix S 35mm f/1.8",
+      "focal_length": "35mm",
+      "aperture": "f/1.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Wide-angle prime"],
+      "release_year": 2021
+    },
+    {
+      "name": "Lumix S 18mm f/1.8",
+      "focal_length": "18mm",
+      "aperture": "f/1.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Ultra-wide prime"],
+      "release_year": 2022
+    },
+    {
+      "name": "Lumix S 100mm f/2.8 Macro",
+      "focal_length": "100mm",
+      "aperture": "f/2.8",
+      "type": "prime",
+      "image_stabilization": false,
+      "special_features": ["Macro capability", "1:1 magnification"],
+      "release_year": 2022
+    },
+    {
+      "name": "Lumix S 14-28mm f/4-5.6 Macro",
+      "focal_length": "14-28mm",
+      "aperture": "f/4-5.6",
+      "type": "zoom",
+      "image_stabilization": false,
+      "special_features": ["Ultra-wide zoom", "Macro capability"],
+      "release_year": 2022
+    }
+  ],
+  "total_count": 14,
+  "last_updated": "2024"
+}
