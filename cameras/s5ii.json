@@ -1,0 +1,137 @@
+{
+  "model": "Lumix S5II",
+  "manufacturer": "Panasonic",
+  "release_year": 2023,
+  "mount": "L-mount",
+  "sensor": {
+    "type": "CMOS",
+    "size": "Full-Frame",
+    "resolution": "24.2MP",
+    "effective_pixels": 24200000,
+    "dimensions": "35.6mm x 23.8mm"
+  },
+  "processor": "Venus Engine",
+  "autofocus": {
+    "type": "Hybrid AF (Phase Detection + Contrast Detection)",
+    "focus_points": 779,
+    "low_light_sensitivity": "-6 EV",
+    "face_detection": true,
+    "eye_detection": true,
+    "animal_detection": true
+  },
+  "image_stabilization": {
+    "type": "5-axis sensor-shift IBIS",
+    "dual_is": true,
+    "dual_is_rating": "5 stops",
+    "lens_compatibility": "Dual I.S. 2 compatible lenses"
+  },
+  "shooting": {
+    "mechanical_shutter": {
+      "max_fps": 7,
+      "shutter_speed_range": "1/8000s - 60s"
+    },
+    "electronic_shutter": {
+      "max_fps": 30,
+      "shutter_speed_range": "1/8000s - 60s"
+    },
+    "burst_buffer": "Unlimited JPEG, 200+ RAW",
+    "pre_burst": false
+  },
+  "video": {
+    "max_resolution": "6K",
+    "formats": {
+      "6k": {
+        "resolution": "5952 x 3968",
+        "frame_rates": [30],
+        "codec": "H.264, H.265",
+        "bit_depth": "10-bit",
+        "color_space": "V-Log, Rec.709"
+      },
+      "4k": {
+        "resolution": "3840 x 2160",
+        "frame_rates": [24, 30, 60],
+        "codec": "H.264, H.265",
+        "bit_depth": "10-bit",
+        "color_space": "V-Log, Rec.709"
+      },
+      "full_hd": {
+        "resolution": "1920 x 1080",
+        "frame_rates": [24, 30, 60, 120, 180],
+        "codec": "H.264, H.265"
+      }
+    },
+    "dynamic_range": "~14+ stops (V-Log)",
+    "external_recording": {
+      "hdmi": "4K 60p 10-bit",
+      "usb_c_ssd": false,
+      "usb_c_formats": []
+    },
+    "timecode": true,
+    "active_cooling": false,
+    "recording_limit": "30 minutes (4K), Unlimited (Full HD)"
+  },
+  "display": {
+    "rear_screen": {
+      "type": "Fully Articulating",
+      "size": "3.0 inch",
+      "resolution": "1840000 dots",
+      "touchscreen": true
+    },
+    "evf": {
+      "present": true,
+      "resolution": "3680000 dots",
+      "magnification": "0.78x",
+      "refresh_rate": "120fps"
+    }
+  },
+  "storage": {
+    "slots": 2,
+    "slot_1": "SD/SDHC/SDXC (UHS-II)",
+    "slot_2": "SD/SDHC/SDXC (UHS-II)",
+    "cfexpress": false,
+    "usb_c_ssd": false
+  },
+  "connectivity": {
+    "wifi": true,
+    "bluetooth": true,
+    "usb": "USB-C 3.2 Gen 1",
+    "hdmi": "HDMI Type A (Full)",
+    "headphone": "3.5mm",
+    "microphone": "3.5mm",
+    "remote": "2.5mm"
+  },
+  "battery": {
+    "type": "DMW-BLK22",
+    "capacity": "2200mAh",
+    "cipa_rating": 370,
+    "usb_charging": true,
+    "usb_power_delivery": true
+  },
+  "physical": {
+    "weight": 740,
+    "weight_unit": "g (body only)",
+    "dimensions": {
+      "width": 134.3,
+      "height": 102.3,
+      "depth": 90.1,
+      "unit": "mm"
+    },
+    "weather_sealing": true,
+    "construction": "Magnesium alloy chassis"
+  },
+  "features": {
+    "dual_card_slots": true,
+    "built_in_flash": false,
+    "film_simulation_dial": false,
+    "focus_peaking": true,
+    "zebra_patterns": true,
+    "waveform_monitor": false,
+    "vectorscope": false,
+    "luts": "V-Log, Rec.709, Custom LUTs"
+  },
+  "price": {
+    "msrp": 1999,
+    "currency": "USD",
+    "body_only": true
+  }
+}

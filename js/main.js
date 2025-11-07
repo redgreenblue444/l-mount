@@ -1,388 +1,50 @@
-// Panasonic Lumix camera data
-const cameras = [
-    {
-        id: 's5iix',
-        name: 'Lumix S5IIX',
-        nickname: 'The Creator\'s Choice',
-        tagline: 'The compact full-frame camera optimized for content creators',
-        price: 2199,
-        priceRange: 'premium',
-        sensor: '24.2MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '7 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 370,
-        weight: 740,
-        memory: 'Dual SD card slots',
-        standoutFeatures: [
-            'Phase Detection AF (first Lumix with PDAF)',
-            '6K video recording',
-            'Compact and lightweight for full-frame',
-            'USB-C SSD recording',
-            'Active cooling for video',
-            'Excellent for vlogging'
-        ],
-        bestFor: [
-            'Content creators',
-            'Vloggers',
-            'Hybrid shooters',
-            'Photographers wanting compact full-frame'
-        ],
-        whyChoose: 'The S5IIX combines phase detection autofocus with 6K video and compact size, making it perfect for content creators who need professional quality in a portable package.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S5IIX%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '3.68M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    },
-    {
-        id: 's5ii',
-        name: 'Lumix S5II',
-        nickname: 'The Hybrid Hero',
-        tagline: 'The compact full-frame camera with phase detection AF',
-        price: 1999,
-        priceRange: 'premium',
-        sensor: '24.2MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '7 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 370,
-        weight: 740,
-        memory: 'Dual SD card slots',
-        standoutFeatures: [
-            'Phase Detection AF (first Lumix with PDAF)',
-            '6K video recording',
-            'Compact and lightweight',
-            '5-stop Dual I.S. 2',
-            'Weather-sealed body',
-            'Excellent value'
-        ],
-        bestFor: [
-            'Hybrid shooters',
-            'Content creators',
-            'Travel photographers',
-            'Photographers wanting modern AF'
-        ],
-        whyChoose: 'The S5II brings phase detection autofocus to Lumix cameras, dramatically improving AF performance. Combined with 6K video and compact size, it\'s an excellent all-around camera.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S5II%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '3.68M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    },
-    {
-        id: 'g9ii',
-        name: 'Lumix G9II',
-        nickname: 'The Speed Master',
-        tagline: 'The flagship Micro Four Thirds camera for speed and action',
-        price: 1899,
-        priceRange: 'premium',
-        sensor: '25.2MP Micro Four Thirds Live MOS',
-        sensorType: 'm43',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '10 fps (mechanical), 60 fps (electronic)',
-        maxFPS: 60,
-        video: '5.8K @ 30p, 4K @ 60p, Full HD @ 120p',
-        videoDynamicRange: 'V-Log: ~13 stops',
-        batteryLife: 390,
-        weight: 658,
-        memory: 'Dual SD card slots',
-        standoutFeatures: [
-            'Fastest shooting in Lumix lineup (60 fps)',
-            'Phase Detection AF',
-            'Pre-burst mode',
-            '8-stop Dual I.S. 2',
-            'Weather-sealed body',
-            'Excellent for wildlife and sports'
-        ],
-        bestFor: [
-            'Sports photographers',
-            'Wildlife photographers',
-            'Action photographers',
-            'Photographers needing speed'
-        ],
-        whyChoose: 'The G9II is Panasonic\'s speed demon, offering incredible burst rates and phase detection AF. Perfect for capturing fast action with Micro Four Thirds portability.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix G9II%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '3.68M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: false,
-        fortyMP: false
-    },
-    {
-        id: 'gh7',
-        name: 'Lumix GH7',
-        nickname: 'The Video Specialist',
-        tagline: 'The Micro Four Thirds camera optimized for video production',
-        price: 2199,
-        priceRange: 'premium',
-        sensor: '25.2MP Micro Four Thirds Live MOS',
-        sensorType: 'm43',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '14 fps (mechanical), 75 fps (electronic)',
-        maxFPS: 75,
-        video: '5.8K @ 60p, 4K @ 120p, Full HD @ 300p',
-        videoDynamicRange: 'V-Log: ~13+ stops',
-        batteryLife: 360,
-        weight: 823,
-        memory: 'Dual slots (SD + CFexpress Type B)',
-        standoutFeatures: [
-            '5.8K 60p video recording',
-            '4K 120p slow motion',
-            'Phase Detection AF',
-            'Active cooling system',
-            'CFexpress Type B support',
-            'Professional video features',
-            'Excellent for video production'
-        ],
-        bestFor: [
-            'Professional videographers',
-            'Content creators',
-            'Video production',
-            'Hybrid shooters prioritizing video'
-        ],
-        whyChoose: 'The GH7 is Panasonic\'s video-focused Micro Four Thirds camera, offering exceptional video capabilities including 5.8K recording, 4K 120p slow motion, and phase detection autofocus.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix GH7%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '3.68M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    },
-    {
-        id: 's9',
-        name: 'Lumix S9',
-        nickname: 'The Compact Creator',
-        tagline: 'The ultra-compact full-frame camera for content creators',
-        price: 1499,
-        priceRange: 'mid',
-        sensor: '24.2MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '7 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 370,
-        weight: 486,
-        memory: 'Single SD card slot',
-        standoutFeatures: [
-            'Ultra-compact full-frame design',
-            'Phase Detection AF',
-            '6K video recording',
-            'Compact and lightweight',
-            '5-stop Dual I.S. 2',
-            'Perfect for vlogging and travel'
-        ],
-        bestFor: [
-            'Content creators',
-            'Vloggers',
-            'Travel photographers',
-            'Photographers wanting smallest full-frame'
-        ],
-        whyChoose: 'The S9 is Panasonic\'s most compact full-frame camera, offering professional image quality in an ultra-portable package perfect for content creators and travelers.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S9%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: false,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: false,
-        evfResolution: 'N/A',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    },
-    {
-        id: 's1rii',
-        name: 'Lumix S1R II',
-        nickname: 'The Resolution Master',
-        tagline: 'The next-generation high-resolution full-frame flagship',
-        price: 3999,
-        priceRange: 'pro',
-        sensor: '47.3MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '9 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 400,
-        weight: 1021,
-        memory: 'Dual slots (SD + CFexpress Type B)',
-        standoutFeatures: [
-            'Highest resolution in Lumix lineup (47.3MP)',
-            'Phase Detection AF',
-            '6-stop Dual I.S. 2 image stabilization',
-            'Weather-sealed magnesium alloy body',
-            'High-resolution mode up to 187MP',
-            '6K video recording',
-            'CFexpress Type B support'
-        ],
-        bestFor: [
-            'Landscape photographers',
-            'Portrait and studio photographers',
-            'Commercial photographers',
-            'Photographers needing maximum detail'
-        ],
-        whyChoose: 'The S1R II is the evolution of the S1R, combining the highest resolution sensor with modern phase detection autofocus and improved video capabilities for the ultimate professional camera.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S1R II%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '5.76M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: true
-    },
-    {
-        id: 's1ii',
-        name: 'Lumix S1 II',
-        nickname: 'The Professional Hybrid',
-        tagline: 'The next-generation balanced full-frame camera',
-        price: 2699,
-        priceRange: 'pro',
-        sensor: '24.2MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '9 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 400,
-        weight: 1021,
-        memory: 'Dual slots (SD + CFexpress Type B)',
-        standoutFeatures: [
-            'Phase Detection AF',
-            'Excellent balance of photo and video',
-            '6-stop Dual I.S. 2',
-            'Weather-sealed construction',
-            '6K video recording',
-            'High-resolution mode up to 96MP',
-            'Robust build quality'
-        ],
-        bestFor: [
-            'General photography enthusiasts',
-            'Hybrid shooters',
-            'Professional photographers',
-            'Travel photographers'
-        ],
-        whyChoose: 'The S1 II builds upon the S1 with phase detection autofocus and improved video capabilities, offering the perfect balance of photography and video in a professional package.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S1 II%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '5.76M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    },
-    {
-        id: 's1iie',
-        name: 'Lumix S1 II E',
-        nickname: 'The Enhanced Professional',
-        tagline: 'The enhanced version of the S1 II with extended features',
-        price: 2899,
-        priceRange: 'pro',
-        sensor: '24.2MP Full-Frame CMOS',
-        sensorType: 'fullframe',
-        processor: 'Venus Engine with Phase Detection AF',
-        autofocus: '779-area Hybrid AF (Phase + Contrast)',
-        continuousShooting: '9 fps (mechanical), 30 fps (electronic)',
-        maxFPS: 30,
-        video: '6K @ 30p, 4K @ 60p, Full HD @ 180p',
-        videoDynamicRange: 'V-Log: ~14+ stops',
-        batteryLife: 400,
-        weight: 1021,
-        memory: 'Dual slots (SD + CFexpress Type B)',
-        standoutFeatures: [
-            'Phase Detection AF',
-            'USB-C SSD recording',
-            'Active cooling for video',
-            '6-stop Dual I.S. 2',
-            'Weather-sealed construction',
-            '6K video recording',
-            'Enhanced video features'
-        ],
-        bestFor: [
-            'Professional videographers',
-            'Hybrid shooters',
-            'Content creators',
-            'Photographers needing extended video capabilities'
-        ],
-        whyChoose: 'The S1 II E is the enhanced version of the S1 II, adding USB-C SSD recording and active cooling for extended video work, making it perfect for professional hybrid shooters.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S1 II E%3C/text%3E%3C/svg%3E',
-        ibis: true,
-        dualCards: true,
-        weatherSeal: true,
-        filmSimDial: false,
-        builtInFlash: false,
-        evf: true,
-        evfResolution: '5.76M dots',
-        screenType: 'Fully Articulating',
-        eightKVideo: false,
-        fourK120fps: true,
-        fortyMP: false
-    }
+// Camera data loaded from JSON files
+let cameras = [];
+const cameraFiles = [
+    'cameras/s9.json',
+    'cameras/s5ii.json',
+    'cameras/s5iix.json',
+    'cameras/g9ii.json',
+    'cameras/gh7.json',
+    'cameras/s1ii.json',
+    'cameras/s1iie.json',
+    'cameras/s1rii.json'
 ];
 
+// Load all camera JSON files
+async function loadCameras() {
+    try {
+        const promises = cameraFiles.map(file => 
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Failed to load ${file}`);
+                    return response.json();
+                })
+                .then(data => {
+                    // Add ID for identification
+                    data.id = file.split('/')[1].replace('.json', '');
+                    return data;
+                })
+        );
+        cameras = await Promise.all(promises);
+        cameras.sort((a, b) => a.price.msrp - b.price.msrp);
+        initializePage();
+    } catch (error) {
+        console.error('Error loading camera data:', error);
+        document.getElementById('camera-profiles').innerHTML = 
+            '<p class="error">Error loading camera specifications. Please refresh the page.</p>';
+    }
+}
+
 // Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
+function initializePage() {
     renderCameraProfiles();
     populateComparisonTables();
     setupFilters();
     setupComparisonTool();
     setupSmoothScroll();
     setupStickyNav();
-});
+}
 
 // Render camera profiles
 function renderCameraProfiles() {
@@ -392,67 +54,166 @@ function renderCameraProfiles() {
 
 // Create camera card HTML
 function createCameraCard(camera) {
-    const priceDisplay = camera.price >= 1000 
-        ? `$${camera.price.toLocaleString()}` 
-        : `$${camera.price}`;
+    const priceDisplay = `$${camera.price.msrp.toLocaleString()}`;
+    const sensorInfo = `${camera.sensor.resolution} ${camera.sensor.size} ${camera.sensor.type}`;
+    const dimensions = camera.physical.dimensions;
+    const dimStr = `${dimensions.width} × ${dimensions.height} × ${dimensions.depth} ${dimensions.unit}`;
+    
+    // Determine price range for filtering
+    let priceRange = 'pro';
+    if (camera.price.msrp < 1600) priceRange = 'mid';
+    else if (camera.price.msrp < 2500) priceRange = 'premium';
+    
+    // Determine sensor type for filtering
+    const sensorType = camera.sensor.size === 'Full-Frame' ? 'fullframe' : 'm43';
+    
+    // Get max FPS
+    const maxFPS = Math.max(
+        camera.shooting.mechanical_shutter.max_fps,
+        camera.shooting.electronic_shutter.max_fps
+    );
+    
+    // Video summary
+    const maxRes = camera.video.max_resolution.toLowerCase().replace(/[.\s]/g, '_');
+    const videoFormat = camera.video.formats[maxRes] || Object.values(camera.video.formats)[0];
+    const videoSummary = camera.video.max_resolution + ' @ ' + 
+        (videoFormat?.frame_rates?.[0] || 'N/A') + 'p';
     
     return `
-        <article class="camera-card" data-price="${camera.priceRange}" data-sensor="${camera.sensorType}">
-            <div class="camera-image">
-                <img src="${camera.image}" alt="${camera.name}" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E${camera.name}%3C/text%3E%3C/svg%3E'">
-            </div>
+        <article class="camera-card" data-price="${priceRange}" data-sensor="${sensorType}">
             <div class="camera-content">
-                <h3>${camera.name} - ${camera.nickname}</h3>
-                <p class="tagline">${camera.tagline}</p>
+                <h3>${camera.model}</h3>
                 <div class="camera-specs">
                     <div class="spec-item">
-                        <span class="spec-label">💰 Price:</span>
-                        <span class="spec-value">${priceDisplay} (body only)</span>
+                        <span class="spec-label">Price:</span>
+                        <span class="spec-value">${priceDisplay} (${camera.price.currency})</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">📐 Sensor:</span>
-                        <span class="spec-value">${camera.sensor}</span>
+                        <span class="spec-label">Release Year:</span>
+                        <span class="spec-value">${camera.release_year}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">⚡ Processor:</span>
+                        <span class="spec-label">Mount:</span>
+                        <span class="spec-value">${camera.mount}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Sensor:</span>
+                        <span class="spec-value">${sensorInfo}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Effective Pixels:</span>
+                        <span class="spec-value">${(camera.sensor.effective_pixels / 1000000).toFixed(1)}MP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Processor:</span>
                         <span class="spec-value">${camera.processor}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">📸 Continuous:</span>
-                        <span class="spec-value">${camera.continuousShooting}</span>
+                        <span class="spec-label">Autofocus:</span>
+                        <span class="spec-value">${camera.autofocus.type}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">🎥 Video:</span>
-                        <span class="spec-value">${camera.video}</span>
+                        <span class="spec-label">Focus Points:</span>
+                        <span class="spec-value">${camera.autofocus.focus_points}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">📊 Video Dynamic Range:</span>
-                        <span class="spec-value">${camera.videoDynamicRange || 'N/A'}</span>
+                        <span class="spec-label">Low Light AF:</span>
+                        <span class="spec-value">${camera.autofocus.low_light_sensitivity}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">🔋 Battery:</span>
-                        <span class="spec-value">~${camera.batteryLife} shots</span>
+                        <span class="spec-label">Image Stabilization:</span>
+                        <span class="spec-value">${camera.image_stabilization.type}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">⚖️ Weight:</span>
-                        <span class="spec-value">${camera.weight}g</span>
+                        <span class="spec-label">Dual I.S. Rating:</span>
+                        <span class="spec-value">${camera.image_stabilization.dual_is_rating}</span>
                     </div>
-                </div>
-                <div class="standout-features">
-                    <h4>✨ Standout Features</h4>
-                    <ul>
-                        ${camera.standoutFeatures.map(feature => `<li>${feature}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="best-for">
-                    <h4>🎯 Best Suited For</h4>
-                    <ul>
-                        ${camera.bestFor.map(use => `<li>${use}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="why-choose">
-                    <h4>💡 Why Choose ${camera.name}?</h4>
-                    <p>${camera.whyChoose}</p>
+                    <div class="spec-item">
+                        <span class="spec-label">Mechanical Shutter:</span>
+                        <span class="spec-value">${camera.shooting.mechanical_shutter.max_fps} fps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Electronic Shutter:</span>
+                        <span class="spec-value">${camera.shooting.electronic_shutter.max_fps} fps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Shutter Speed Range:</span>
+                        <span class="spec-value">${camera.shooting.mechanical_shutter.shutter_speed_range}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Video Max Resolution:</span>
+                        <span class="spec-value">${videoSummary}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Video Dynamic Range:</span>
+                        <span class="spec-value">${camera.video.dynamic_range}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Active Cooling:</span>
+                        <span class="spec-value">${camera.video.active_cooling ? 'Yes' : 'No'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">USB-C SSD Recording:</span>
+                        <span class="spec-value">${camera.video.external_recording.usb_c_ssd ? 'Yes' : 'No'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Display:</span>
+                        <span class="spec-value">${camera.display.rear_screen.size}" ${camera.display.rear_screen.type}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Display Resolution:</span>
+                        <span class="spec-value">${(camera.display.rear_screen.resolution / 1000000).toFixed(1)}M dots</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">EVF:</span>
+                        <span class="spec-value">${camera.display.evf.present ? 
+                            `${(camera.display.evf.resolution / 1000000).toFixed(2)}M dots, ${camera.display.evf.magnification}x` : 
+                            'None'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Storage Slots:</span>
+                        <span class="spec-value">${camera.storage.slots}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Storage Type:</span>
+                        <span class="spec-value">${camera.storage.slot_1}${camera.storage.slot_2 ? ', ' + camera.storage.slot_2 : ''}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">CFexpress Support:</span>
+                        <span class="spec-value">${camera.storage.cfexpress ? 'Yes' : 'No'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Connectivity:</span>
+                        <span class="spec-value">Wi-Fi, Bluetooth, ${camera.connectivity.usb}, ${camera.connectivity.hdmi}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Battery:</span>
+                        <span class="spec-value">${camera.battery.type} (${camera.battery.capacity})</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">CIPA Battery Rating:</span>
+                        <span class="spec-value">${camera.battery.cipa_rating} shots</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">USB Charging:</span>
+                        <span class="spec-value">${camera.battery.usb_charging ? 'Yes' : 'No'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Weight:</span>
+                        <span class="spec-value">${camera.physical.weight}${camera.physical.weight_unit}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Dimensions:</span>
+                        <span class="spec-value">${dimStr}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Weather Sealing:</span>
+                        <span class="spec-value">${camera.physical.weather_sealing ? 'Yes' : 'No'}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Construction:</span>
+                        <span class="spec-value">${camera.physical.construction}</span>
+                    </div>
                 </div>
             </div>
         </article>
@@ -470,80 +231,98 @@ function populateComparisonTables() {
 
 function populateSpecTable() {
     const tbody = document.getElementById('spec-table-body');
-    tbody.innerHTML = cameras.map(camera => `
-        <tr>
-            <td><strong>${camera.name}</strong></td>
-            <td>$${camera.price.toLocaleString()}</td>
-            <td>${camera.sensor.includes('47.3') ? '47.3MP' : camera.sensor.includes('25.2') ? '25.2MP' : '24.2MP'}</td>
-            <td>${camera.maxFPS}${camera.maxFPS >= 30 ? '*' : ''}</td>
-            <td>${camera.video.split(',')[0]}</td>
-            <td>${camera.ibis ? '✅' : '❌'}</td>
-            <td>${camera.weatherSeal ? '✅' : '❌'}</td>
-            <td>${camera.dualCards ? '✅' : '❌'}</td>
-        </tr>
-    `).join('');
-}
-
-function populateSizeTable() {
-    const tbody = document.getElementById('size-table-body');
-    tbody.innerHTML = cameras.map(camera => `
-        <tr>
-            <td><strong>${camera.name}</strong></td>
-            <td>${camera.weight}g</td>
-            <td>${camera.screenType}</td>
-            <td>${camera.evfResolution}</td>
-        </tr>
-    `).join('');
-}
-
-function populateBatteryTable() {
-    const tbody = document.getElementById('battery-table-body');
-    const sorted = [...cameras].sort((a, b) => b.batteryLife - a.batteryLife);
-    tbody.innerHTML = sorted.map(camera => {
-        let notes = '';
-        if (camera.batteryLife >= 390) notes = 'Excellent';
-        else if (camera.batteryLife >= 370) notes = 'Very Good';
-        else if (camera.batteryLife >= 360) notes = 'Good';
-        else notes = 'Average';
+    tbody.innerHTML = cameras.map(camera => {
+        const maxFPS = Math.max(
+            camera.shooting.mechanical_shutter.max_fps,
+            camera.shooting.electronic_shutter.max_fps
+        );
+        const maxRes = camera.video.max_resolution.toLowerCase().replace(/[.\s]/g, '_');
+        const videoFormat = camera.video.formats[maxRes] || Object.values(camera.video.formats)[0];
+        const videoSummary = camera.video.max_resolution + ' @ ' + 
+            (videoFormat?.frame_rates?.[0] || 'N/A') + 'p';
         
         return `
             <tr>
-                <td><strong>${camera.name}</strong></td>
-                <td>~${camera.batteryLife}</td>
-                <td>${notes}</td>
+                <td><strong>${camera.model}</strong></td>
+                <td>$${camera.price.msrp.toLocaleString()}</td>
+                <td>${camera.sensor.resolution}</td>
+                <td>${maxFPS}</td>
+                <td>${videoSummary}</td>
+                <td>${camera.image_stabilization.type ? 'Yes' : 'No'}</td>
+                <td>${camera.physical.weather_sealing ? 'Yes' : 'No'}</td>
+                <td>${camera.storage.slots > 1 ? 'Yes' : 'No'}</td>
             </tr>
         `;
     }).join('');
 }
 
+function populateSizeTable() {
+    const tbody = document.getElementById('size-table-body');
+    tbody.innerHTML = cameras.map(camera => {
+        const dim = camera.physical.dimensions;
+        const dimStr = `${dim.width} × ${dim.height} × ${dim.depth} ${dim.unit}`;
+        const evfRes = camera.display.evf.present ? 
+            `${(camera.display.evf.resolution / 1000000).toFixed(2)}M dots` : 
+            'N/A';
+        
+        return `
+            <tr>
+                <td><strong>${camera.model}</strong></td>
+                <td>${camera.physical.weight}${camera.physical.weight_unit}</td>
+                <td>${dimStr}</td>
+                <td>${camera.display.rear_screen.type}</td>
+                <td>${evfRes}</td>
+            </tr>
+        `;
+    }).join('');
+}
+
+function populateBatteryTable() {
+    const tbody = document.getElementById('battery-table-body');
+    tbody.innerHTML = cameras.map(camera => `
+        <tr>
+            <td><strong>${camera.model}</strong></td>
+            <td>${camera.battery.type}</td>
+            <td>${camera.battery.cipa_rating} shots</td>
+            <td>${camera.battery.usb_charging ? 'Yes' : 'No'}</td>
+        </tr>
+    `).join('');
+}
+
 function populateFeatureMatrix() {
     const tbody = document.getElementById('feature-matrix-body');
     const features = [
-        { name: 'IBIS', key: 'ibis' },
-        { name: 'Dual Card Slots', key: 'dualCards' },
-        { name: '47MP+ Sensor', key: 'fortyMP' },
-        { name: 'Fully Articulating Screen', key: 'screenType', value: 'Fully Articulating' },
-        { name: 'Weather Sealing', key: 'weatherSeal' },
-        { name: 'EVF', key: 'evf' },
-        { name: '4K 120fps', key: 'fourK120fps' },
-        { name: 'Phase Detection AF', key: 'autofocus', value: 'Phase' }
+        { name: 'IBIS', key: 'image_stabilization', check: (c) => c.image_stabilization.type !== null },
+        { name: 'Dual Card Slots', key: 'storage', check: (c) => c.storage.slots > 1 },
+        { name: '47MP+ Sensor', key: 'sensor', check: (c) => c.sensor.effective_pixels >= 47000000 },
+        { name: 'Fully Articulating Screen', key: 'display', check: (c) => c.display.rear_screen.type === 'Fully Articulating' },
+        { name: 'Weather Sealing', key: 'physical', check: (c) => c.physical.weather_sealing },
+        { name: 'EVF', key: 'display', check: (c) => c.display.evf.present },
+        { name: '4K 120fps', key: 'video', check: (c) => {
+            const formats = c.video.formats;
+            const fourK = formats['4k'];
+            return fourK?.frame_rates?.includes(120) || false;
+        }},
+        { name: 'Phase Detection AF', key: 'autofocus', check: (c) => c.autofocus.type.includes('Phase') },
+        { name: 'USB-C SSD Recording', key: 'video', check: (c) => c.video.external_recording.usb_c_ssd },
+        { name: 'Active Cooling', key: 'video', check: (c) => c.video.active_cooling },
+        { name: 'CFexpress Support', key: 'storage', check: (c) => c.storage.cfexpress }
     ];
     
     tbody.innerHTML = features.map(feature => {
         const cells = cameras.map(camera => {
-            let hasFeature = false;
-            if (feature.value) {
-                hasFeature = camera[feature.key] && camera[feature.key].includes(feature.value);
-            } else {
-                hasFeature = camera[feature.key] === true;
-            }
-            return hasFeature ? '✅' : '❌';
+            const hasFeature = feature.check(camera);
+            return hasFeature ? 'Yes' : 'No';
         }).join('');
         
         return `
             <tr>
                 <td><strong>${feature.name}</strong></td>
-                ${cells.split('').map(cell => `<td>${cell}</td>`).join('')}
+                ${cells.split('').map((cell, i) => {
+                    const camera = cameras[i];
+                    const hasFeature = feature.check(camera);
+                    return `<td>${hasFeature ? 'Yes' : 'No'}</td>`;
+                }).join('')}
             </tr>
         `;
     }).join('');
@@ -556,12 +335,12 @@ function populateComparisonSelects() {
     cameras.forEach(camera => {
         const option1 = document.createElement('option');
         option1.value = camera.id;
-        option1.textContent = camera.name;
+        option1.textContent = camera.model;
         select1.appendChild(option1);
         
         const option2 = document.createElement('option');
         option2.value = camera.id;
-        option2.textContent = camera.name;
+        option2.textContent = camera.model;
         select2.appendChild(option2);
     });
 }
@@ -620,35 +399,47 @@ function performComparison() {
     resultsDiv.innerHTML = `
         <div class="comparison-side-by-side">
             <div class="comparison-camera">
-                <h4>${camera1.name}</h4>
-                <img src="${camera1.image}" alt="${camera1.name}" loading="lazy" onerror="this.style.display='none'">
+                <h4>${camera1.model}</h4>
                 <table class="comparison-details">
-                    <tr><td>Price</td><td>$${camera1.price.toLocaleString()}</td></tr>
-                    <tr><td>Sensor</td><td>${camera1.sensor}</td></tr>
-                    <tr><td>Max FPS</td><td>${camera1.maxFPS}</td></tr>
-                    <tr><td>Video</td><td>${camera1.video}</td></tr>
-                    <tr><td>Video Dynamic Range</td><td>${camera1.videoDynamicRange || 'N/A'}</td></tr>
-                    <tr><td>Battery</td><td>~${camera1.batteryLife} shots</td></tr>
-                    <tr><td>Weight</td><td>${camera1.weight}g</td></tr>
-                    <tr><td>IBIS</td><td>${camera1.ibis ? '✅' : '❌'}</td></tr>
-                    <tr><td>Weather Seal</td><td>${camera1.weatherSeal ? '✅' : '❌'}</td></tr>
-                    <tr><td>Dual Cards</td><td>${camera1.dualCards ? '✅' : '❌'}</td></tr>
+                    <tr><td>Price</td><td>$${camera1.price.msrp.toLocaleString()}</td></tr>
+                    <tr><td>Release Year</td><td>${camera1.release_year}</td></tr>
+                    <tr><td>Mount</td><td>${camera1.mount}</td></tr>
+                    <tr><td>Sensor</td><td>${camera1.sensor.resolution} ${camera1.sensor.size}</td></tr>
+                    <tr><td>Effective Pixels</td><td>${(camera1.sensor.effective_pixels / 1000000).toFixed(1)}MP</td></tr>
+                    <tr><td>Max FPS (Mech)</td><td>${camera1.shooting.mechanical_shutter.max_fps}</td></tr>
+                    <tr><td>Max FPS (Elec)</td><td>${camera1.shooting.electronic_shutter.max_fps}</td></tr>
+                    <tr><td>Video Max Res</td><td>${camera1.video.max_resolution}</td></tr>
+                    <tr><td>Video Dynamic Range</td><td>${camera1.video.dynamic_range}</td></tr>
+                    <tr><td>IBIS</td><td>${camera1.image_stabilization.type}</td></tr>
+                    <tr><td>Dual I.S. Rating</td><td>${camera1.image_stabilization.dual_is_rating}</td></tr>
+                    <tr><td>Battery (CIPA)</td><td>${camera1.battery.cipa_rating} shots</td></tr>
+                    <tr><td>Weight</td><td>${camera1.physical.weight}${camera1.physical.weight_unit}</td></tr>
+                    <tr><td>Weather Sealing</td><td>${camera1.physical.weather_sealing ? 'Yes' : 'No'}</td></tr>
+                    <tr><td>Storage Slots</td><td>${camera1.storage.slots}</td></tr>
+                    <tr><td>USB-C SSD</td><td>${camera1.video.external_recording.usb_c_ssd ? 'Yes' : 'No'}</td></tr>
+                    <tr><td>Active Cooling</td><td>${camera1.video.active_cooling ? 'Yes' : 'No'}</td></tr>
                 </table>
             </div>
             <div class="comparison-camera">
-                <h4>${camera2.name}</h4>
-                <img src="${camera2.image}" alt="${camera2.name}" loading="lazy" onerror="this.style.display='none'">
+                <h4>${camera2.model}</h4>
                 <table class="comparison-details">
-                    <tr><td>Price</td><td>$${camera2.price.toLocaleString()}</td></tr>
-                    <tr><td>Sensor</td><td>${camera2.sensor}</td></tr>
-                    <tr><td>Max FPS</td><td>${camera2.maxFPS}</td></tr>
-                    <tr><td>Video</td><td>${camera2.video}</td></tr>
-                    <tr><td>Video Dynamic Range</td><td>${camera2.videoDynamicRange || 'N/A'}</td></tr>
-                    <tr><td>Battery</td><td>~${camera2.batteryLife} shots</td></tr>
-                    <tr><td>Weight</td><td>${camera2.weight}g</td></tr>
-                    <tr><td>IBIS</td><td>${camera2.ibis ? '✅' : '❌'}</td></tr>
-                    <tr><td>Weather Seal</td><td>${camera2.weatherSeal ? '✅' : '❌'}</td></tr>
-                    <tr><td>Dual Cards</td><td>${camera2.dualCards ? '✅' : '❌'}</td></tr>
+                    <tr><td>Price</td><td>$${camera2.price.msrp.toLocaleString()}</td></tr>
+                    <tr><td>Release Year</td><td>${camera2.release_year}</td></tr>
+                    <tr><td>Mount</td><td>${camera2.mount}</td></tr>
+                    <tr><td>Sensor</td><td>${camera2.sensor.resolution} ${camera2.sensor.size}</td></tr>
+                    <tr><td>Effective Pixels</td><td>${(camera2.sensor.effective_pixels / 1000000).toFixed(1)}MP</td></tr>
+                    <tr><td>Max FPS (Mech)</td><td>${camera2.shooting.mechanical_shutter.max_fps}</td></tr>
+                    <tr><td>Max FPS (Elec)</td><td>${camera2.shooting.electronic_shutter.max_fps}</td></tr>
+                    <tr><td>Video Max Res</td><td>${camera2.video.max_resolution}</td></tr>
+                    <tr><td>Video Dynamic Range</td><td>${camera2.video.dynamic_range}</td></tr>
+                    <tr><td>IBIS</td><td>${camera2.image_stabilization.type}</td></tr>
+                    <tr><td>Dual I.S. Rating</td><td>${camera2.image_stabilization.dual_is_rating}</td></tr>
+                    <tr><td>Battery (CIPA)</td><td>${camera2.battery.cipa_rating} shots</td></tr>
+                    <tr><td>Weight</td><td>${camera2.physical.weight}${camera2.physical.weight_unit}</td></tr>
+                    <tr><td>Weather Sealing</td><td>${camera2.physical.weather_sealing ? 'Yes' : 'No'}</td></tr>
+                    <tr><td>Storage Slots</td><td>${camera2.storage.slots}</td></tr>
+                    <tr><td>USB-C SSD</td><td>${camera2.video.external_recording.usb_c_ssd ? 'Yes' : 'No'}</td></tr>
+                    <tr><td>Active Cooling</td><td>${camera2.video.active_cooling ? 'Yes' : 'No'}</td></tr>
                 </table>
             </div>
         </div>
@@ -684,3 +475,6 @@ function setupStickyNav() {
         }
     });
 }
+
+// Load cameras when DOM is ready
+document.addEventListener('DOMContentLoaded', loadCameras);
