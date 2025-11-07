@@ -231,8 +231,8 @@ const cameras = [
         fortyMP: false
     },
     {
-        id: 's1iir',
-        name: 'Lumix S1IIR',
+        id: 's1rii',
+        name: 'Lumix S1RII',
         nickname: 'The Resolution Powerhouse',
         tagline: 'The flagship high-resolution full-frame camera with 47.3MP sensor',
         price: 3799,
@@ -262,8 +262,8 @@ const cameras = [
             'Commercial photographers',
             'Photographers needing maximum detail'
         ],
-        whyChoose: 'The S1IIR delivers exceptional resolution and image quality with phase detection AF, making it perfect for photographers who need maximum detail, large prints, or professional commercial work.',
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S1IIR%3C/text%3E%3C/svg%3E',
+        whyChoose: 'The S1RII delivers exceptional resolution and image quality with phase detection AF, making it perfect for photographers who need maximum detail, large prints, or professional commercial work.',
+        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23ddd\' width=\'400\' height=\'300\'/%3E%3Ctext fill=\'%23999\' font-family=\'sans-serif\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ELumix S1RII%3C/text%3E%3C/svg%3E',
         ibis: true,
         dualCards: true,
         weatherSeal: true,
